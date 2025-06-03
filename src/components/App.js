@@ -33,11 +33,13 @@ const App = ({ userId }) => {
     fetchPosts();
   }, [apiUrl]);
 
-  if (loading) return <div>Loading posts...</div>;
+  if (loading) return <div>Loading...</div>;
   if (error) return <div>Error: {error}</div>;
 
   return (
     <div>
+   
+
       <h2>{userId ? `Posts by User ${userId}` : 'All Posts'}</h2>
       <ul>
         {posts.map(post => (
